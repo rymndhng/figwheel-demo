@@ -1,2 +1,10 @@
 /* some style */
 
+.counter-name {
+    font-family: "Comic Sans MS"
+}
+
+.counter-value {
+    color: red;
+    font-family: "Fira Sans";
+}

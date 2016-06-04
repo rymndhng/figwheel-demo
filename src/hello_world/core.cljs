@@ -7,10 +7,18 @@
 
 ;; define your app data so that it doesn't get over-written on reload
 
-(defonce app-state (atom {:text "Hello world!"}))
+(defonce app-state (atom {:count 0}))
+
+(defn update-counter []
+  (swap! app-state update :count (fn [x] (+ x 3))))
 
 (defn hello-world []
-  [:h1 (:text @app-state)])
+  [:div
+   [:h3 {:class "counter-name"} "Count"]
+   [:h3 {:class "counter-value"} (:count @app-state)]
+   [:button {:onClick update-counter}
+    "Increment Me!"
+    ]])
 
 (reagent/render-component [hello-world]
                           (. js/document (getElementById "app")))
