@@ -1,6 +1,8 @@
 (ns hello-world.core
-  (:require [reagent.core :as reagent :refer [atom]]))
+  (:require [reagent.core :as reagent :refer [atom]]
+            [devtools.core :as devtools]))
 
+(devtools/install!)
 (enable-console-print!)
 
 (println "This text is printed from src/hello-world/core.cljs. Go ahead and edit it and see reloading in action.")
