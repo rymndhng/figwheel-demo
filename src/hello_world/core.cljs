@@ -1,4 +1,5 @@
 (ns hello-world.core
+  (:require-macros [cljs.repl :refer [doc]])
   (:require [reagent.core :as reagent :refer [atom]]
             [devtools.core :as devtools]))
 
